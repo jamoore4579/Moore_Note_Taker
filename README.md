@@ -1,9 +1,9 @@
-# Moore_Team_Profile_Generator
+# Note Taker - Express.js
   ![Github License](http://img.shields.io/badge/license-MIT-blue.svg)
   
 
   ## Description
-  The Team Profile Generator is a node command line application that creates a profile of the entire team including the Manager, Engineer, and Interns. The generator will create a HTML webpage displaying the team members and profile information about each team member.
+  The Note Taker application give the user the ability to add notes that will be saved in a json file. With the ability to save the notes the user can click on the note and read it later plus the application has the ability to delete a note if no longer needed.
 
   ## Table of Contents
   * [Installation](#installation)
@@ -14,36 +14,27 @@
   * [Questions](#questions)
   
   ## Installation
-  1.	Copy the clone link of the repository from GitHub
-  2.	Open Bash or Terminal Window
-  3.	Navigate to the directory that the repo will reside
-  4. Type 'git clone' in the console and paste the repo link
-  5. Open the repo in code editor
-  6. Open terminal witihin code editor
-  7. Type 'npm install to install dependency packages needed
+  1. Copy the clone link of the repository from GitHub 
+  2. Open Bash or Terminal Window 
+  3. Navigate to the directory that the repo will reside 
+  4. Type 'git clone' in the console and paste the repo link 
+  5. Open the repo in code editor 
+  6. Open terminal within code editor 
+  7. Type 'npm install' to install dependency packes needed
 
   *Required packages:*
-
-  * Inquirer
-  * Jest
-
+  *express
 
   ## Usage
-  1.  The user will navigate to index.js file in terminal
-  2.  The user will type node index.js to initiate the team manager's prompt questions
-  3.  The user will answer each question. Then, will be asked to add a team member
-  4.  Once the user has added all members desired and selected 'I don't want to add any more team members' as their option. The user's input will be added to specific sections of the HTML.
-  5.	The HTML file will be stored in a folder. When user opens the HTML file, it will display a nicely formatted team roster with contact information based on their input.
+  1. The user will navigate to https://note-taker-jam.herokuapp.com/
+  2. Select the 'Get Started' button
+  3. Type a note and hit the save icon
 
-  Screenshot of HTML file:
+  ## Screen Shots:
 
-  <img src ='./src/img/Team_Screen_Shot.PNG' alt='Picture of example HTML file with team roster displayed'>
+  <img src="./public/assets/img/Note_Take_Landing_Page_Screenshot.PNG">
 
-  ## Demonstration Video
-  View the link: [Screencastify] https://drive.google.com/file/d/1rIBKkVmfD4ykvfEM_H8oDWDl1kDKCD-q/view?usp=sharing
-  
-  ## Test
-  View the link: [Screencastify] https://drive.google.com/file/d/1ClU-Wt9AlNOv8HfwfwLXGAGKDivTRy7o/view?usp=sharing
+  <img src="./public/assets/img/Note_Take_Screenshot.PNG">
 
   ## License
   This project is license under MIT
