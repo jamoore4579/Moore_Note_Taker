@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { isModuleNamespaceObject } = require('util/types');
 
 module.exports = app => {
 
@@ -28,5 +27,26 @@ module.exports = app => {
         app.get("/api/notes/:id", function(req, res) {
             res.json(notes[req.params.id]);
         });
-    })
+
+        // display notes.html file
+        app.get('/notes', function(req, res) {
+            res.sendFile(path.join(__dirname, "../public/notes.html"));
+        });
+
+        // display index.html as a default
+        app.get('*', function (req, res) {
+            res.sendFile(path.join(__dirname, "../public/index.html"));
+        }) ;
+
+        // update the JSON file when a note is added
+        function updateDb() {
+            fs.writeFile("db/db.josn", JSON.stringify(notes, '\t'), err => {
+                if (err) throw err;
+                return true;
+            });
+        }
+
+    });
+
+
 }
