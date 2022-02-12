@@ -23,7 +23,7 @@
   7. Type 'npm install' to install dependency packes needed
 
   *Required packages:*
-  *express
+  * express
 
   ## Usage
   1. The user will navigate to https://note-taker-jam.herokuapp.com/
