@@ -8,7 +8,7 @@ module.exports = app => {
 
         if (err) throw err;
 
-        let notes = JSON.parse(data);
+        const notes = JSON.parse(data);
 
         // api/notes GET route
         app.get("/api/notes", function(req, res) {

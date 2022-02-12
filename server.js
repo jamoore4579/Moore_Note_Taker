@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
 
+app.use(express.static('public'));
+
 // setup require with the routes file
 require('./routes/routes')(app)
 
