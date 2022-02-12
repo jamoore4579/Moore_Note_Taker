@@ -1,4 +1,3 @@
-const res = require('express/lib/response');
 const fs = require('fs');
 const data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
 
@@ -28,7 +27,4 @@ module.exports = function(app) {
 
         res.json(data);
     });
-
-    fs.writeFileSync("./db/db.json", JSON.stringify(data));
-    res.json(data);
 }
