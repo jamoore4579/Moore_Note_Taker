@@ -1,7 +1,7 @@
 // dependencies
 const express = require('express');
-const fs = require('fs');
-const path = require('path');
+const apiRoutes = require('./routes/apiRoutes')
+const htmlRoutes = require('./routes/htmlRoutes')
 
 // set the express app
 const app = express();
@@ -10,12 +10,13 @@ const PORT = process.env.PORT || 3001
 // set data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname));
+
+// setup api and html routes
+app.use('/api', apiRoutes)
+app.use('/', htmlRoutes)
 
 app.use(express.static('public'));
 
-// setup require with the routes file
-require('./routes/routes')(app)
 
 // set the listener
 app.listen(PORT, function() {
